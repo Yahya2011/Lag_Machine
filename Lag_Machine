@@ -1,0 +1,62 @@
+from tkinter import *
+import keyboard
+import random
+
+
+def lag():
+    while True:
+        if keyboard.read_key() == "space":
+            while True:
+                death = [
+                    "Lag",
+                    "Lag",
+                    "Lag",
+                    "Lag",
+                    "Lag",
+                    "Lag",
+                    "Lag",
+                    "Lag",
+                    "Lag",
+                    "Lag"
+                ]
+                num = random.randint(0, 9)
+                die = random.randint(1, 2)
+                die_more = random.randint(0, 5)
+                if die == 1:
+                    if die_more == 0:
+                        print(death[num])
+                    elif die_more == 1:
+                        print(death[num])
+                    elif die_more == 2:
+                        print(death[num])
+                    elif die_more == 3:
+                        print(death[num])
+                    elif die_more == 4:
+                        print(death[num])
+                    elif die_more == 5:
+                        print(death[num])
+                elif die == 2:
+                    if die_more == 0:
+                        print(death[num])
+                    elif die_more == 1:
+                        print(death[num])
+                    elif die_more == 2:
+                        print(death[num])
+                    elif die_more == 3:
+                        print(death[num])
+                    elif die_more == 4:
+                        print(death[num])
+                    elif die_more == 5:
+                        print(death[num])
+
+
+window = Tk()
+window.title("Lag Machine")
+window.protocol("WM_DELETE_WINDOW", lambda: None)
+window = Canvas(window, width=250, height=250)
+window.pack()
+bttn = Button(window, text="Lag (EXTREMELY DANGEROUS)", command=lag, bg="black", fg="white")
+bttn.place(x=40, y=100)
+lbl = Label(window, text="Press Space After The Button", font=("Ariel", 10))
+lbl.place(x=40, y=150)
+window.mainloop()
